@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Batuhan {
+    
+    private String renk;
+    private int model;
+
+    // Yapıcı metod-constructor
+    public Batuhan(String renk, int model) {
+        this.renk = renk;
+        this.model = model;
+    }
+
+    
+    public String getRenk() {
+        return renk;
+    }
+
+    public int getModel() {
+        return model;
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        
+        System.out.println("Modeli girin: ");
+        int model = scan.nextInt();
+        
+        scan.nextLine();  
+        
+        System.out.println("Rengi girin: ");
+        String renk = scan.nextLine();
+
+        
+        Batuhan araba = new Batuhan(renk, model);
+
+        System.out.println("Arabanın rengi: "+ araba.getRenk());
+        System.out.println("Arabanın modeli: "+ araba.getModel());
+    }
+}
